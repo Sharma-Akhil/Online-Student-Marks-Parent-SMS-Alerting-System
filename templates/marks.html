@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa; /* Light cyan background color */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            text-align: center; /* Center align content */
+            padding-top: 50px; /* Add padding to the top */
+        }
+        .container {
+            width: 400px; /* Set width of form container */
+            margin: 0 auto; /* Center align container */
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for a card effect */
+        }
+        h1 {
+            color: #333333;
+        }
+        form {
+            text-align: left; /* Left align form elements */
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type=text], input[type=number] {
+            width: calc(100% - 20px); /* Adjust input width */
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Include padding in width */
+            font-size: 14px;
+        }
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        .message {
+            list-style-type: none;
+            padding: 0;
+        }
+        .message li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .danger {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Online Student Marks Parent SMS Alerting System</h1>
+        
+        <!-- Flash messages or any other content can go here -->
+        
+        <form method="POST" action="/marks">
+            <label for="student_id">Student ID:</label><br>
+            <input type="text" id="student_id" name="student_id" required><br><br>
+            <label for="subject">Subject:</label><br>
+            <input type="text" id="subject" name="subject" required><br><br>
+            <label for="mark">Mark:</label><br>
+            <input type="number" id="mark" name="mark" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
